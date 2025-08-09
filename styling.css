@@ -17,8 +17,8 @@ body {
 
 /* keep it hidden until fonts load */
 body.ready {
-    opacity: 1;
-    transition: opacity 0.3s ease-out;
+    visibility: hidden;
+    height: 100vh;
 }
 
 body.ready * {
@@ -28,8 +28,9 @@ body.ready * {
 }
 
 body:not(.ready) * {
-    visibility: hidden;
-    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+
 }
 
 
@@ -1035,3 +1036,4 @@ footer i {
     }
 
 }
+
