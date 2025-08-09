@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYP's Art History Club — Events</title>
+    <link rel="icon" type="image/x-icon" href="images/bef/fav.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styling.css" type="text/css">
+
+</head>
+
+<body class="ready">
+    <nav class="mobile">
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-menu1">
+                <li><a class="dropdown-item" href="home.html"> Home </a></li>
+                <li><a class="dropdown-item disabled" aria-current="page"> Events </a></li>
+                <li><a class="dropdown-item" href="gallery.html"> Gallery</a></li>
+                <li><a class="dropdown-item" href="news.html"> Newsletter</a></li>
+                <li><a class="dropdown-item" href="faq.html"> Help Topics </a></li>
+            </ul>
+        </div>
+
+        <a id="img" href="home.html"> <img id="img" src="images/bef/fav.ico" alt="Our CCA's Logo"
+                style="color: #F8EDE3;" />
+        </a>
+    </nav>
+
+    <nav class="normalnav">
+        <ul class="navlinks">
+            <li><a href="home.html">Home</a></li>
+            <li><a aria-current="page">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <!-- Logo in the middle -->
+            <li>
+                <a href="home.html"> <img src="images/bef/fav.ico" alt="CCA Logo" id="img"></a>
+            </li>
+
+            <li><a href="news.html">Newsletter</a></li>
+            <li><a href="faq.html">Help Topics</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="eventblock">
+        <section class="tableevent">
+            <table class="table">
+                <h1> EXPLOrE YOuR <br> CrEATiViTY. </h1>
+                <h3> Upcoming Events, Open to all. More details below! </h3>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Event Name</th>
+                        <th scope="col">Date</th>
+                        <th scope="col"> Experience Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th> Art Exhibition Viewing </th>
+                        <td> 17 August 2025 </td>
+                        <td> 0 </td>
+                    </tr>
+                    <tr>
+                        <th> Oil Painting Workshop </th>
+                        <td>19 August 2025 </td>
+                        <td> 2 </td>
+                    </tr>
+                    <tr>
+                        <th> "Art through History" Talk </th>
+                        <td> 21 August 2025 </td>
+                        <td> 0 </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="more" class="eventmore">
+            <div>
+                <p> EDIT EVENT DETAILS HERE </p>
+            </div>
+            
+        </section>
+
+    </div>
+
+    <footer class="text-center text-lg-end mt-5">
+        <p>
+            <a href="https://www.instagram.com/nypsketchart/?hl=en">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://x.com/nyptweets">
+                <i class="bi bi-twitter"></i>
+            </a>
+
+            <a href="https://discord.gg/cBjnpVhW">
+                <i class="bi bi-discord"></i>
+            </a>
+
+            © 2025 Art History Club
+
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script> //load only when fonts have loaded 
+        document.fonts.ready.then(() => {
+            document.body.classList.remove('ready');
+        });
+    </script>
+</body>
+
+</html>

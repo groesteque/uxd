@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYP's Art History Club — Newsletter </title>
+    <link rel="icon" type="image/x-icon" href="images/bef/fav.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styling.css" type="text/css">
+</head>
+
+<body class="ready">
+    <nav class="mobile">
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-menu1">
+                <li><a class="dropdown-item" href="home.html"> Home </a></li>
+                <li><a class="dropdown-item" href="events.html"> Events </a></li>
+                <li><a class="dropdown-item" href="gallery.html"> Gallery</a></li>
+                <li><a class="dropdown-item disabled" aria-current="page"> Newsletter</a></li>
+                <li><a class="dropdown-item" href="faq.html"> Help Topics </a></li>
+            </ul>
+        </div>
+
+        <a id="img" href="home.html"> <img id="img" src="images/bef/fav.ico" alt="Our CCA's Logo"
+                style="color: #F8EDE3;" />
+        </a>
+    </nav>
+
+    <nav class="normalnav">
+        <ul class="navlinks">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <!-- Logo in the middle -->
+            <li>
+                <a href="home.html"> <img src="images/bef/fav.ico" alt="CCA Logo" id="img"></a>
+            </li>
+
+            <li><a aria-current="page">Newsletter</a></li>
+            <li><a href="faq.html">Help Topics</a></li>
+
+        </ul>
+    </nav>
+
+
+
+
+    <div class="textform">
+        <section class="news">
+            <div>
+                <h1> JOIn OUR circLE OF cREaTORS. </h1>
+                <p> Exclusive updates and inspiration — straight to your inbox.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <form class="form-body">
+                <div class="mb-3">
+                    <label for="name" class="form-label"> First Name <span style="color: red;"> * </span></label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Jane Doe"
+                        required title="Enter Your Name" maxlength="10">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address <span style="color: red;"> * </span>
+                    </label>
+                    <input type="email" class="form-control" id="email" required placeholder="sample@gmail.com"
+                        title="Enter a Valid Email Address" maxlength="50">
+                </div>
+                <div class="mb-3">
+                    <label for="number" class="form-label">Phone Number <span style="color: red;"> *
+                        </span></label>
+                    <input type="tel" class="form-control" id="number" required placeholder="+65 91234567" minlength="8"
+                        maxlength="8" title="Enter an 8 Digit Singaporean Phone Number"
+                        onkeypress="return digit(event)">
+                </div>
+
+                <button type="submit" class="btn btn-primary">SUBSCRIBE </button>
+            </form>
+        </section>
+
+        <section>
+            <div class="formsubmitted" style="display:none;">
+                <h2> YOu'RE all SEt, <span id="showname"></span>!</h2>
+
+                <p> Exclusive content coming your way. </p>
+
+                <p> Check your registered inbox <span id="showemail"></span> <br>
+                    or mobile number <span id="shownumber"></span> for confirmation.
+                </p>
+
+                <img src="images/thankyouform.png" alt="Thank you for signing up!" id="tyimg">
+
+            </div>
+        </section>
+    </div>
+
+
+    <footer class="text-center text-lg-end mt-5">
+        <p>
+            <a href="https://www.instagram.com/nypsketchart/?hl=en">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://x.com/nyptweets">
+                <i class="bi bi-twitter"></i>
+            </a>
+
+            <a href="https://discord.gg/cBjnpVhW">
+                <i class="bi bi-discord"></i>
+            </a>
+
+            © 2025 Art History Club
+
+        </p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script> //restrict phone number to have letters
+        function digit(restrict) {
+            return event.charCode >= 48 && event.charCode <= 57;
+        }
+    </script>
+
+    <script> //form processing
+        const form = document.getElementsByClassName('form-body')[0];  // first element with form-body
+        form.addEventListener('submit', change);
+
+        function change(event) {
+            event.preventDefault(); //prevent reloading
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const number = document.getElementById('number').value.trim();
+
+            document.getElementById('showname').textContent = name;
+            document.getElementById('showemail').textContent = email;
+            document.getElementById('shownumber').textContent = number;
+
+            form.style.display = 'none';
+            document.querySelector('.formsubmitted').style.display = 'block';
+        }
+    </script>
+
+    <script> //load only when fonts have loaded 
+        document.fonts.ready.then(() => {
+            document.body.classList.remove('ready');
+        });
+    </script>
+</body>
+
+</html>

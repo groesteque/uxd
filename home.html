@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYP's Art History Club </title>
+    <link rel="icon" type="image/x-icon" href="images/bef/fav.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styling.css" type="text/css">
+
+</head>
+
+<body class="ready">
+    <nav class="mobile">
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown-menu1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-menu1">
+                <li><a class="dropdown-item disabled" aria-current="page"> Home </a></li>
+                <li><a class="dropdown-item" href="events.html"> Events </a></li>
+                <li><a class="dropdown-item" href="gallery.html"> Gallery</a></li>
+                <li><a class="dropdown-item" href="gallery.html"> Newsletter</a></li>
+                <li><a class="dropdown-item" href="gallery.html"> Help Topics </a></li>
+            </ul>
+        </div>
+
+        <a id="img" href="home.html"> <img id="img" src="images/bef/fav.ico" alt="Our CCA's Logo"
+                style="color: #F8EDE3;" />
+        </a>
+    </nav>
+
+    <nav class="normalnav">
+        <ul class="navlinks">
+            <li><a aria-current="page">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <!-- Logo in the middle -->
+            <li>
+                <a href="home.html"> <img src="images/bef/fav.ico" alt="CCA Logo" id="img"></a>
+            </li>
+
+            <li><a href="news.html">Newsletter</a></li>
+            <li><a href="news.html">Help Topics</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="homeblock">
+
+        <h1>Welcome to the <br> Art History Club!</h1>
+
+        <section class="motto">
+
+            <div class="txt">
+                <h3>Our Mission, <br> Your Inspiration </h3>
+                <p>We believe art is more than visuals — it's about:</p>
+            </div>
+
+            <ol class="things">
+                <li>Developing appreciation and an understanding of art</li>
+                <li>Gain social awareness about the social, cultural and political state of time periods</li>
+                <li>Discover the motivation behind important artwork</li>
+                <li>Museum visits, discussions, workshops and many more!</li>
+            </ol>
+        </section>
+
+        <div id="pre">
+            <h1> Art of the month: </h1>
+        </div>
+
+        <section class="aotm">
+            <img src="images/home/catweyebrow.jpg" id="imghome"
+                alt="Jean Mansel, 'La Fleur des histoires ou les hystores rommaines abregies…', France 1454."
+                width="400" height="300" />
+
+            <div>
+                <h3> La Fleur des Histoires </h3>
+                <h4> by Jean Mansel </h4>
+
+                <p> few short sentences to describe the painting and its interpretations few short sentences to describe
+                    the painting and its interpretations few short sentences to describe the painting and its
+                    interpretations few short sentences to describe the painting and its interpretations </p>
+            </div>
+
+
+        </section>
+
+        <section class="learnmore">
+            <h2> Itching to spark creativity? <br> Attend our <a href="events.html"> upcoming events</a> or <a
+                    href="news.html"> sign up </a> for our newsletter!
+            </h2>
+        </section>
+
+    </div>
+
+    <footer class="text-center text-lg-end mt-5">
+        <p>
+            <a href="https://www.instagram.com/nypsketchart/?hl=en">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://x.com/nyptweets">
+                <i class="bi bi-twitter"></i>
+            </a>
+
+            <a href="https://discord.gg/cBjnpVhW">
+                <i class="bi bi-discord"></i>
+            </a>
+
+            © 2025 Art History Club
+
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script> //load only when fonts have loaded 
+        document.fonts.ready.then(() => {
+            document.body.classList.remove('ready');
+        });
+    </script>
+</body>
+
+</html>
