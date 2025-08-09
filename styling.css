@@ -17,8 +17,8 @@ body {
 
 /* keep it hidden until fonts load */
 body.ready {
-    visibility: hidden;
-    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
 }
 
 body.ready * {
@@ -28,8 +28,8 @@ body.ready * {
 }
 
 body:not(.ready) * {
-    opacity: 1;
-    transition: opacity 0.3s ease-out;
+    visibility: hidden;
+    height: 100vh;
 }
 
 
@@ -1033,4 +1033,5 @@ footer i {
     img.card-img-top {
         max-height: 200px;
     }
+
 }
